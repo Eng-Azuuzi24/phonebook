@@ -9,8 +9,6 @@ type contact={
 const contacts:contact[] = [];
 
 
-contacts.push({id:1, name:'Azuzi',phone:'4656567'});
-contacts.push({id:2, name:'Ai',phone:'46567'});
 
 
 

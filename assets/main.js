@@ -1,6 +1,4 @@
 var contacts = [];
-contacts.push({ id: 1, name: 'Azuzi', phone: '4656567' });
-contacts.push({ id: 2, name: 'Ai', phone: '46567' });
 renderTable(contacts);
 function add() {
     var nameInput = document.querySelector('#person-name');
