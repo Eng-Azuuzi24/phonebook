@@ -32,11 +32,23 @@ function add() {
     const rows = table.querySelectorAll('tbody tr'); // Assuming phone number is in tbody rows
 
     // Check if phone number already exists
+
+//tells its position :if exists
+//-1=if isn't exist
+    const index=contacts.findIndex(c =>c.name.toLocaleLowerCase() === name.toLocaleLowerCase() && c.phone === phone);
+    if(index != -1){
+        alert('contact Existed');
+        return;
+    } 
+
+// another way
+/*
         const existingContact=contacts.filter(c =>c.name.toLocaleLowerCase() === name.toLocaleLowerCase() && c.phone === phone);
         if(existingContact.length > 0){
             alert('contact Existed');
             return;
         } 
+*/
 
 /*   another way of code
 

@@ -13,11 +13,21 @@ function add() {
     var table = document.querySelector('table');
     var rows = table.querySelectorAll('tbody tr'); // Assuming phone number is in tbody rows
     // Check if phone number already exists
-    var existingContact = contacts.filter(function (c) { return c.name.toLocaleLowerCase() === name.toLocaleLowerCase() && c.phone === phone; });
-    if (existingContact.length > 0) {
+    //tells its position :if exists
+    //-1=if isn't exist
+    var index = contacts.findIndex(function (c) { return c.name.toLocaleLowerCase() === name.toLocaleLowerCase() && c.phone === phone; });
+    if (index != -1) {
         alert('contact Existed');
         return;
     }
+    // another way
+    /*
+            const existingContact=contacts.filter(c =>c.name.toLocaleLowerCase() === name.toLocaleLowerCase() && c.phone === phone);
+            if(existingContact.length > 0){
+                alert('contact Existed');
+                return;
+            }
+    */
     /*   another way of code
     
          for (const row of rows) {
