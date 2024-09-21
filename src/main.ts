@@ -35,12 +35,12 @@ function add() {
 
 //tells its position :if exists
 //-1=if isn't exist
+
     const index=contacts.findIndex(c =>c.name.toLocaleLowerCase() === name.toLocaleLowerCase() && c.phone === phone);
     if(index != -1){
         alert('contact Existed');
         return;
-    } 
-
+    }   
 // another way
 /*
         const existingContact=contacts.filter(c =>c.name.toLocaleLowerCase() === name.toLocaleLowerCase() && c.phone === phone);
